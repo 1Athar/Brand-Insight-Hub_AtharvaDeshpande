@@ -102,6 +102,40 @@ Use Postman or `curl` to send a POST request:
 | `/prompts/not-mentioned` | `GET` | Returns prompts where the brand was missing (Gap Analysis). |
 
 ---
+---
+🧠 **Key Architectural Decisions**
+1. Strategic Prompt Batching (2-Prompt Limit):
+System is currently used for 2 Prompts for demo purposes to make it more robust and efficient we can increase the prompt generation to multiple prompts as well.
+
+2.UI Stabilization Buffers:
+A buffer of 20 sec between inputting 2 questions to LLMs Like ChatGPT have been placed so that whole answer is produced efficiently and then next question is inputted.This can also be changed as per requirements.
+
+3.Persistent Browser Context (Session-as-a-Service)
+Decision: Used launch_persistent_context to store browser state in a local /chatgpt_session folder.This eliminates the "Login Barrier." By requiring a manual login only once, the script can run autonomously in the future, maintaining the user's logged-in state, preferences, and "Temporary Chat" settings, which are vital for consistent brand tracking results.
+
+---
+
+---
+**Future Scope**
+1) Sentiment Analysis Integration
+Implement sentiment analysis to identify the positive or negative presence of a brand across online platforms, enabling better reputation monitoring and decision-making.
+Prompt Generation Based on Google Search Trends
+2) Generate intelligent prompts using Google Search keyword volume to align content and insights with real-world user search behavior.
+
+3)Citation-Based Domain Recommendations
+Analyze domains with higher citation frequency and recommend users maintain an active presence on these domains to improve visibility and credibility.
+
+4)Partnership Recommendations
+Provide data-driven partnership suggestions by identifying brands, platforms, or organizations with overlapping audiences and complementary influence.
+
+5)Region-Wise Prompt Generation
+Create region-specific prompts based on the geographical origin of user requests, enabling localized and more relevant responses.1)Adding Sentiment Analysis
+
+6)Root Cause Analysis: Cause of my competitor brand is being reffered or cited than my brand by LLM.
+
+---
+
+
 
 ## 📂 Project Structure
 
