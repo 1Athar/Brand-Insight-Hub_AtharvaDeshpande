@@ -39,8 +39,18 @@ An enterprise-grade, asynchronous engine designed to track brand visibility, cit
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/ai-visibility-tracker.git
-   cd ai-visibility-tracker
+   git clone https://github.com/1Athar/Brand-Insight-Hub_AtharvaDeshpande.git 
+   cd Frontend\brand-insight-hub
+
+   running frontend locally:
+
+   npm run dev
+
+   for api:
+
+   cd ..\..
+
+   python api.py
    ```
 
 2. **Install dependencies:**
